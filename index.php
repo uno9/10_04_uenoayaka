@@ -26,17 +26,6 @@
                 <span class="navbar-toggler-icon"></span>
 
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="ajax_index.php">挑戦者板</a>
-
-                        <?=$user_menu?>                       
-
-                        <a class="nav-item"><a class="nav-link" href="logout.php">ログアウト</a>
-                    </li>
-                </ul>
-            </div>
         </nav>
     </header>
 
@@ -46,7 +35,7 @@
             <input type="text" class="form-control" id="name" name="name">
         </div>
         <div class="form-group">
-            <label for="upfile">Image</label>
+            <label for="upfile">人質画像</label>
             <input type="file" class="form-control-file" id="upfile" name="upfile" accept="image/*" capture="camera">
         </div>
         <div class="form-group">

@@ -19,12 +19,12 @@
 
 
         <ul>
-            <button id="gu">いし</button>
-            <button id="pa">かみ</button>
-            <button id="choki">はさみ</button>
+            <button id="gu">ぐー</button>
+            <button id="pa">ぱー</button>
+            <button id="choki">ちょき</button>
         </ul>
 
-        <p>※じゃんけんの結果をクリックしてね</p>
+        <p>※じゃんけんの<span style="color:ff0000;background-color:#FFCACA;">結果</span>をクリックしてね※</p>
 
 
     </main>
@@ -47,13 +47,13 @@
             var num = Math.floor(Math.random() * 3);
 
             if (num == 0) {
-                $('#echo').text('いし');
+                $('#echo').text('ぐー');
                 $('#judgment').text('あいこ');
                 $('#judgment').text('もう一回！');
 
 
             } else if (num == 1) {
-                $('#echo').text('はさみ');
+                $('#echo').text('ちょき');
                 $('#judgment').text('負け');
                 $(function () {
                     $('#judgment').on('click', function () {
@@ -64,7 +64,7 @@
 
 
             } else if (num == 2) {
-                $('#echo').text('かみ');
+                $('#echo').text('ぱー');
                 $('#judgment').text('勝ち');
                 $(function () {
                     $('#judgment').on('click', function () {
@@ -86,7 +86,7 @@
         var num = Math.floor(Math.random() * 3);
 
         if (num == 0) {
-            $('#echo').text('いし');
+            $('#echo').text('ぐー');
             $('#judgment').text('負け');
             $(function () {
                 $('#judgment').on('click', function () {
@@ -97,7 +97,7 @@
 
 
         } else if (num == 1) {
-            $('#echo').text('はさみ');
+            $('#echo').text('ちょき');
             $('#judgment').text('勝ち');
             $(function () {
                 $('#judgment').on('click', function () {
@@ -108,7 +108,7 @@
 
 
         } else if (num == 2) {
-            $('#echo').text('かみ');
+            $('#echo').text('ぱー');
             $('#judgment').text('あいこ');
             $('#judgment').text('もう一回！');
 
@@ -123,7 +123,7 @@
         var num = Math.floor(Math.random() * 3);
 
         if (num == 0) {
-            $('#echo').text('いし');
+            $('#echo').text('ぐー');
             $('#judgment').text('勝ち');
             $(function () {
                 $('#judgment').on('click', function () {
@@ -134,13 +134,13 @@
 
 
         } else if (num == 1) {
-            $('#echo').text('はさみ');
+            $('#echo').text('ちょき');
             $('#judgment').text('あいこ');
             $('#judgment').text('もう一回！');
 
 
         } else if (num == 2) {
-            $('#echo').text('かみ');
+            $('#echo').text('ぱー');
             $('#judgment').text('負け');
             $(function () {
                 $('#judgment').on('click', function () {
