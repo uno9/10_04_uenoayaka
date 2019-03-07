@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>じゃんけん！</title>
+</head>
+
+<body>
+    <header>
+        <h1>じゃんけん！</h1>
+    </header>
+
+    <main>
+        <div id="echo">じゃんけん...</div>
+        <div id="judgment"></div>
+
+
+        <ul>
+            <button id="gu">いし</button>
+            <button id="pa">かみ</button>
+            <button id="choki">はさみ</button>
+        </ul>
+
+        <div id="hpBox">
+            <div id="myhp">あなたの体力</div>
+            <meter id="myhp" value="1"></meter>
+        </div>
+
+        <div id="emBox">
+            <div id="emhp">相手の体力</div>
+            <meter id="emhp" value="1"></meter>
+
+        </div>
+    </main>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(function () {
+
+    }); 
+</script>
+
+
+<script>
+    $(function () {
+        $('#gu').on('click', function () {
+            alert('ぽん！');
+
+            var num = Math.floor(Math.random() * 3);
+
+            if (num == 0) {
+                $('#echo').text('いし');
+                $('#judgment').text('あいこ');
+
+            } else if (num == 1) {
+                $('#echo').text('はさみ');
+                $('#judgment').text('まけ');
+
+            } else if (num == 2) {
+                $('#echo').text('かみ');
+                $('#judgment').text('かち');
+
+            } else {
+                console.log('error');
+            }
+        });
+    });
+
+    $('#pa').on('click', function () {
+        alert('ぽん！');
+
+        var num = Math.floor(Math.random() * 3);
+
+        if (num == 0) {
+            $('#echo').text('いし');
+            $('#judgment').text('まけ');
+
+        } else if (num == 1) {
+            $('#echo').text('はさみ');
+            $('#judgment').text('かち');
+
+        } else if (num == 2) {
+            $('#echo').text('かみ');
+            $('#judgment').text('あいこ');
+
+        } else {
+            console.log('error');
+        }
+    });
+
+    $('#choki').on('click', function () {
+        alert('ぽん！');
+
+        var num = Math.floor(Math.random() * 3);
+
+        if (num == 0) {
+            $('#echo').text('いし');
+            $('#judgment').text('かち');
+
+        } else if (num == 1) {
+            $('#echo').text('はさみ');
+            $('#judgment').text('あいこ');
+
+        } else if (num == 2) {
+            $('#echo').text('かみ');
+            $('#judgment').text('まけ');
+
+        } else {
+            console.log('error');
+        }
+    });
+
+
+</script>
+
+<script>
+    Location.href = "ajax_index.html";
+</script>
+
+</html>
