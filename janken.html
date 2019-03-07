@@ -24,16 +24,9 @@
             <button id="choki">はさみ</button>
         </ul>
 
-        <div id="hpBox">
-            <div id="myhp">あなたの体力</div>
-            <meter id="myhp" value="1"></meter>
-        </div>
+        <p>※じゃんけんの結果をクリックしてね</p>
 
-        <div id="emBox">
-            <div id="emhp">相手の体力</div>
-            <meter id="emhp" value="1"></meter>
 
-        </div>
     </main>
 </body>
 
@@ -56,14 +49,30 @@
             if (num == 0) {
                 $('#echo').text('いし');
                 $('#judgment').text('あいこ');
+                $('#judgment').text('もう一回！');
+
 
             } else if (num == 1) {
                 $('#echo').text('はさみ');
-                $('#judgment').text('まけ');
+                $('#judgment').text('負け');
+                $(function () {
+                    $('#judgment').on('click', function () {
+                        location.href = "http://localhost/10_04_uenoayaka/ajax_index.html";
+                    });
+
+                });
+
 
             } else if (num == 2) {
                 $('#echo').text('かみ');
-                $('#judgment').text('かち');
+                $('#judgment').text('勝ち');
+                $(function () {
+                    $('#judgment').on('click', function () {
+                        location.href = "http://localhost/10_04_uenoayaka/ajax_w.index.html";
+                    });
+
+                });
+
 
             } else {
                 console.log('error');
@@ -78,15 +87,30 @@
 
         if (num == 0) {
             $('#echo').text('いし');
-            $('#judgment').text('まけ');
+            $('#judgment').text('負け');
+            $(function () {
+                $('#judgment').on('click', function () {
+                    location.href = "http://localhost/10_04_uenoayaka/ajax_index.html";
+                });
+
+            });
+
 
         } else if (num == 1) {
             $('#echo').text('はさみ');
-            $('#judgment').text('かち');
+            $('#judgment').text('勝ち');
+            $(function () {
+                $('#judgment').on('click', function () {
+                    location.href = "http://localhost/10_04_uenoayaka/ajax_w.index.html";
+                });
+
+            });
+
 
         } else if (num == 2) {
             $('#echo').text('かみ');
             $('#judgment').text('あいこ');
+            $('#judgment').text('もう一回！');
 
         } else {
             console.log('error');
@@ -100,15 +124,31 @@
 
         if (num == 0) {
             $('#echo').text('いし');
-            $('#judgment').text('かち');
+            $('#judgment').text('勝ち');
+            $(function () {
+                $('#judgment').on('click', function () {
+                    location.href = "http://localhost/10_04_uenoayaka/ajax_w.index.html";
+                });
+
+            });
+
 
         } else if (num == 1) {
             $('#echo').text('はさみ');
             $('#judgment').text('あいこ');
+            $('#judgment').text('もう一回！');
+
 
         } else if (num == 2) {
             $('#echo').text('かみ');
-            $('#judgment').text('まけ');
+            $('#judgment').text('負け');
+            $(function () {
+                $('#judgment').on('click', function () {
+                    location.href = "http://localhost/10_04_uenoayaka/ajax_index.html";
+                });
+
+            });
+
 
         } else {
             console.log('error');

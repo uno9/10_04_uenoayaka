@@ -1,24 +1,3 @@
-<?PHP
-
-//session start
-session_start();
-// var_dump($_SESSION["kanri_flg"]);
-
-//0. 読み込み
-include('functions.php');
-
-//0.5 ログインチェック
-chk_ssid();
-
-$menu= menu($_SESSION["kanri_flg"]);
-$k_flg=$_SESSION["kanri_flg"];
-
-$user_menu='';
-
-
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -59,11 +38,6 @@ $user_menu='';
                 </ul>
             </div>
         </nav>
-        <ul>
-            <li>ポーカー</li>
-            <li>にらめっこ</li>
-            <li>かくれんぼ</li>
-        </ul>
     </header>
 
     <form method="post" action="insert.php" enctype="multipart/form-data">

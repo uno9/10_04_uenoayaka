@@ -1,15 +1,3 @@
-<?php
-
-session_start();
-include('functions.php');
-chk_ssid();
-
-$pdo=db_conn();
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -17,7 +5,7 @@ $pdo=db_conn();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>挑戦者たち
+    <title>挑戦者板
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -33,7 +21,7 @@ $pdo=db_conn();
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">挑戦者たち</a>
+            <a class="navbar-brand" href="#">挑戦者板</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -73,10 +61,20 @@ $pdo=db_conn();
     <script>
 
         // DBから取得したデータを表示する関数
-        // function listData(data) {
-
-
-        // }
+        function listData(data) {
+            console.log(data);
+            var str = '';
+            console.log(data.length);
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                str += '<p>' + data[i].name + '_'
+                    + data[i].image + '_'
+                    + data[i].comment + '_'
+                    + data[i].indate + '</p>';
+            }
+            console.log(data);
+            return str;
+        }
 
         // DBからデータを取得する関数
         function selectData() {
@@ -85,6 +83,7 @@ $pdo=db_conn();
 
                 //done:成功
                 .done(function (data, textStatus, jqXHR) {
+                    cosole.log(data);
                     result = listData(data);
                     $('#echo').html(result);
                 })
@@ -98,6 +97,8 @@ $pdo=db_conn();
                     console.log('complete');
 
                 });
+
+            return
         }
         //selectDataを実行
         selectData();

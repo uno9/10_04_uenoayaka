@@ -5,7 +5,7 @@ include('functions.php');
 // 入力チェック　task,deadlineがあるか
 if (
     !isset($_POST['name']) || $_POST['name']=='' ||
-    !isset($_POST['image']) || $_POST['image']==''
+    !isset($_POST['comment']) || $_POST['comment']==''
 ) {
     exit('ParamError');
 }
